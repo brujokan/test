@@ -1,0 +1,71 @@
+openapi: 3.0.3
+info:
+  title: Inditex test API
+  description: |-
+    This is a test about prices endpoints for Inditex
+  version: 1.0.0
+paths:
+  /price/find:
+    get:
+      tags:
+        - price
+      summary: Finds prices by date, product or brand
+      operationId: find
+      parameters:
+        - name: date
+          in: query
+          description: Date of the price application
+          required: false
+          explode: true
+          schema:
+            type: string
+        - name: product
+          in: query
+          description: Product identification
+          required: false
+          explode: true
+          schema:
+            type: integer
+        - name: brand
+          in: query
+          description: Brand identification
+          required: false
+          explode: true
+          schema:
+            type: integer
+      responses:
+        '200':
+          description: successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PriceResponse'
+        '400':
+          description: Invalid status value
+        '404':
+          description: Resources not found
+components:
+  schemas:
+    PriceResponse:
+      type: object
+      properties:
+        product_id:
+          type: integer
+          format: int64
+          example: 10
+        brand_id:
+          type: integer
+          format: int64
+          example: 198772
+        price_id:
+          type: integer
+          format: int32
+          example: 7
+        start_date:
+          type: string
+          format: date-time
+        end_date:
+          type: string
+          format: date-time
+        final_price:
+          type: number
