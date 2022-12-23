@@ -5,7 +5,7 @@ info:
     This is a test about prices endpoints for Inditex
   version: 1.0.0
 paths:
-  /price/find:
+  /price/finde:
     get:
       tags:
         - price
