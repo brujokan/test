@@ -7,6 +7,7 @@ mvnw
 mvnw.cmd
 .mvn/wrapper
 .gitignore
+.mvn
 
 ### STS ###
 .apt_generated
