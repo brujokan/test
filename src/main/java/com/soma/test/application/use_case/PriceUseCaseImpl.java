@@ -12,6 +12,7 @@ import java.sql.Timestamp;
 public class PriceUseCaseImpl implements PriceUseCase {
 
     private PriceRepository priceRepository;
+
     @Autowired
     public PriceUseCaseImpl(PriceRepository priceRepository) {
         this.priceRepository = priceRepository;

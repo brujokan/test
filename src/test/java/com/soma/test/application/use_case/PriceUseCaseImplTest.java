@@ -3,7 +3,6 @@ package com.soma.test.application.use_case;
 import com.soma.test.builder.PriceBuilder;
 import com.soma.test.domain.model.Price;
 import com.soma.test.domain.repository.PriceRepository;
-import com.soma.test.exception.NotFoundException;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
@@ -12,7 +11,7 @@ import org.mockito.junit.jupiter.MockitoExtension;
 
 import java.sql.Timestamp;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.when;
 

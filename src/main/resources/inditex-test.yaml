@@ -14,7 +14,7 @@ paths:
       parameters:
         - name: date
           in: query
-          description: Date of the price application
+          description: Date of the price application (Ex. 2022-06-14 16:00:00)
           required: false
           explode: true
           schema:
